@@ -3,6 +3,7 @@ export type Member = {
   id: number; //รหัสสมาชิก
   name: string;  //ชื่อสมาชิก
   role: string; //ตำแหน่ง
+  imageUrl?: string; //รูปภาพ
 };
 
 //กำหนดโครงสร้างข้อมูลของวง

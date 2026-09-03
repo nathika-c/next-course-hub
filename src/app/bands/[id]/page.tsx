@@ -80,18 +80,37 @@ export default async function BandDetailPage({ params }: Props) {
           <hr style={{ border: "none", borderTop: "1px solid #eee", margin: "16px 0" }} />
 
           {/* สมาชิกวง */}
-          <div>
-            <h3 style={{ fontSize: "18px", fontWeight: "bold", marginBottom: "12px" }}>
-              สมาชิก:
-            </h3>
-            <ul style={{ listStyleType: "none", padding: 0, margin: 0, lineHeight: "1.8" }}>
-              {band.members.map((member) => (
-                <li key={member.id} style={{ color: "#374151" }}>
-                  {member.name} ({member.role})
-                </li>
-              ))}
-            </ul>
-          </div>
+<div>
+  <h3 style={{ fontSize: "18px", fontWeight: "bold", marginBottom: "12px" }}>
+    สมาชิก:
+  </h3>
+  <ul style={{ listStyleType: "none", padding: 0, margin: 0, lineHeight: "1.8" }}>
+    {band.members.map((member) => (
+      <li 
+        key={member.id} 
+        style={{ 
+          color: "#374151", 
+          display: "flex", 
+          alignItems: "center", 
+          gap: "12px", 
+          marginBottom: "10px" 
+        }}
+      >
+        {/* แสดงรูปภาพสมาชิก */}
+        {member.imageUrl && (
+          <Image
+            src={member.imageUrl}
+            alt={member.name}
+            width={200}
+            height={300}
+            style={{ borderRadius: "0.5rem", objectFit: "cover" }}
+          />
+        )}
+        <span>{member.name} ({member.role})</span>
+      </li>
+    ))}
+  </ul>
+</div>
         </div>
 
       </div>
