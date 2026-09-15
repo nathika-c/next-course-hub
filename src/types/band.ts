@@ -13,4 +13,6 @@ export type Band = {
   genre: string; //ประเภท
   imageUrl?: string; //รูปภาพ
   members: Member[]; //รายชื่อสมาชิก
+  followers?: number; //จำนวนผู้ติดตาม
+  likes?: number; //จำนวนผู้ถูกใจ
 };

@@ -1,30 +1,35 @@
-export type Course = {
-  id: number;
-  code: string;
-  title: string;
-  credits: number;
-  isOpen: boolean;
-  description?: string;
-};
+// "use client";
+
+import type { Course } from "@/types/course";
 
 type CourseCardProps = {
   course: Course;
-  description?: string;
+  isFavorite: boolean;
+  onToggleFavorite: (id: string) => void;
 };
 
-export default function CourseCard({ course, description }: CourseCardProps) {
+export default function CourseCard({
+  course,
+  isFavorite,
+  onToggleFavorite,
+}: CourseCardProps) {
   return (
-    <>
-      <article key={course.id}
-        className="border p-4 rounded-lg shadow-md ">
-        <h2>{course.title}</h2>
-        <p>รหัสวิชา: {course.code}</p>
-        <p>{course.credits} หน่วยกิต</p>
-        <p className={course.isOpen ? "font-bold text-green-500" : "font-bold text-red-500"}>
-          {course.isOpen ? "เปิดลงทะเบียน" : "ปิดลงทะเบียน"}
-        </p>
-        <p>{course.description}</p>
-      </article>
-    </>
+    <article className="courseCard">
+      <div>
+        <h2>{course.name}</h2>
+        <p><strong>รหัสวิชา:</strong> {course.code}</p>
+        <p><strong>จำนวน:</strong> {course.credit} หน่วยกิต</p>
+      {/* <p><strong>ผู้สอน:</strong> {course.instructor}</p> */}
+      </div>
+
+      <button
+        type="button"
+        className="favoriteBtn"
+        aria-pressed={isFavorite}
+        onClick={() => onToggleFavorite(course.id)}
+      >
+        {isFavorite ? "❤️ อยู่ในรายการโปรด" : "🤍 เพิ่มเป็นรายการโปรด"}
+      </button>
+    </article>
   );
 }

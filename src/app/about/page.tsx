@@ -1,6 +1,6 @@
 export default function AboutPage() {
   const title: string = "เกี่ยวกับโปรเจกต์ Student Course Hub";
-  const description: string = "ระบบคลังข้อมูลรายวิชาและสื่อการเรียนรู้สำหรับนักศึกษา สาขาวิชาวิทยาการคอมพิวเตอร์";
+  const description: string = "web project";
   const author: string = "นางสาวณฐิกา จันทร์เสถียร รหัส 6804101319";
 
   const features: string[] = [

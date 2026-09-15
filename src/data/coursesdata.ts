@@ -1,39 +1,16 @@
-import { Course } from "@/types/course";
+import type { Course } from "@/types/course";
 
 export const courses: Course[] = [
   {
-    id: 1,
-    code: "10301231",
-    title: "Web Technology",
-    credits: 3,
-    isOpen: true,
+    id: "CS101",
+    code: "CS101",
+    name: "Introduction to Computer Science",
+    credit: 3,
   },
   {
-    id: 2,
-    code: "10301232",
-    title: "Database System",
-    credits: 3,
-    isOpen: false,
-  },
-  {
-    id: 3,
-    code: "10301233",
-    title: "Data Structures and Algorithms",
-    credits: 3,
-    isOpen: true,
-  },
-  {
-    id: 4,
-    code: "10301234",
-    title: "Object-Oriented Programming",
-    credits: 3,
-    isOpen: true,
-  },
-  {
-    id: 5,
-    code: "10301235",
-    title: "Software Engineering",
-    credits: 3,
-    isOpen: false,
+    id: "CS201",
+    code: "CS201",
+    name: "Data Structures and Algorithms",
+    credit: 3,
   },
 ];
