@@ -6,7 +6,7 @@ export const initialGames: Game[] = [
     title: "Minecraft",
     platform: "PC",
     estimatedHours: 100,
-    status: "playing",
+    status: "completed",
   },
   {
     id: "game-2",
@@ -19,8 +19,8 @@ export const initialGames: Game[] = [
     id: "game-3",
     title: "Cookie Run: Kingdom",
     platform: "Mobile",
-    estimatedHours: 50,
-    status: "playing",
+    estimatedHours: 49,
+    status: "not-started",
   },
   {
     id: "game-4",

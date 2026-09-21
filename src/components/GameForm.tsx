@@ -146,7 +146,7 @@ export default function GameForm({ initialGame, onSave, onCancel }: GameFormProp
             type="number"
             value={draft.estimatedHours}
             onChange={handleChange}
-            placeholder="เช่น 50"
+            placeholder="เช่น 67"
             style={{
               width: "100%",
               padding: "10px 12px",
